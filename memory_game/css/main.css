@@ -1,0 +1,86 @@
+h2{
+	text-align: center;
+	color: #0D2c40;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+	margin: 0;
+}
+
+header{
+	background-color: #f15b31;
+	padding: 30px 20px;
+}
+
+/* #wrapper{
+	background-color: teal;
+	width: 950px;
+	margin: 0 auto;
+}
+*/
+
+body{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	background-color: #FFFFFF;
+  	color: black;
+  	margin: 0;
+
+}
+
+#memlist{ 
+	text-align: center;
+	height: 215px;
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 170px;
+}
+
+#memlist li{
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+nav{
+  	margin: 0;
+  	padding: 20px 0;
+ 	overflow: hidden;
+ 	background-color: #00A6B3;
+}
+
+nav a {
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline;
+  margin: 0 20px;
+  
+}
+
+/* Change the link color to purple on hover */
+nav a:hover {
+  background-color: #726FE8;
+}
+
+/* #nav li{
+	display: inline;
+	float: left;
+} */
+
+main{
+	width: 850px;
+	margin: 35px auto;
+}
+footer{ 
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 20px;
+	background-color: #0D2C40;
+	color: white;
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 800px;
+}
+
