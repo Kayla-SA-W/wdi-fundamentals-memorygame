@@ -1,4 +1,5 @@
 
+
 //array holding all cards
 var cards = [
 	{
@@ -23,13 +24,16 @@ var cards = [
 var cardsInPlay = [];
 //function that compares the length of the array to see if two cards have been played
 function checkForMatch(){
+	var score = 0;
 	//if else to alert if a match has been found
-	if (cardsInPlay.length === 2){
-		if (cardsInPlay[0] === cardsInPlay[1]){
-			alert("You found a match!");
-		}else{
-			alert("Sorry, try again.");
-		}
+	if (cardsInPlay[0] === cardsInPlay[1]){
+		alert("You found a match!");
+		score = score + 5;
+		document.getElementById('result').innerHTML = score;
+	}else{
+		alert("Sorry, try again.");
+		score = score - 5;
+		document.getElementById('result').innerHTML = score;
 	}
 }
 function flipCard(){
@@ -37,9 +41,11 @@ function flipCard(){
 	console.log("User flipped " + cards[cardId].rank);
 	cardsInPlay.push(cards[cardId].rank);
 	this.setAttribute('src', cards[cardId].cardImage);
-	checkForMatch();
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
+	if (cardsInPlay.length === 2){
+		checkForMatch();
+	}
 
 }
 //memory game board
@@ -52,4 +58,15 @@ function createBoard(){
 		cardElement.addEventListener('click', flipCard);
 	}
 }
+
+function resetBoard() {
+	cardsInPlay = [];
+	for(var i = 0; i< card.length; i++){
+		var reset = document.getElementsByTagName('img')[i];
+		reset.setAttribute('src', "images/back.png");
+	}
+}
+
+document.getElementsByTagName('button')[0].addEventListener('click', resetBoard);
+
 createBoard();
